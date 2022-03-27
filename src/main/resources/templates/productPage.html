@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница товара</title>
+</head>
+<body>
+
+<p th:text="'id: ' + ${product.id}"> </p>
+<p th:text="'description: ' + ${product.description}"> </p>
+<p th:text="'price: ' + ${product.price}"> </p>
+<p th:text="'city: ' + ${product.city}"> </p>
+<p th:text="'author: ' + ${product.author}"> </p>
+<p th:text="'date of created: ' + ${product.dateOfCreated}"> </p>
+
+
+<img th:src="${'data:image/jpeg;charset=utf-8;base64,' + image}" height="300px" width="300px" alt="Фото продукта">
+
+</body>
+</html>

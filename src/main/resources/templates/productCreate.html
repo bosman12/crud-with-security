@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <title>Create user</title>
+  <title>Создать продукт</title>
 </head>
 <body>
-<form action="#" th:action="@{/product-create}" th:object="${product}" method="post">
+<form action="#" th:action="@{/product-create}" th:object="${product}" method="post" enctype="multipart/form-data">
   <label for="title">title</label>
   <input type="text" th:field="*{title}" id="title" placeholder="title">
   <br/>
@@ -15,13 +15,15 @@
   <label for="price">price</label>
   <input type="text" th:field="*{price}" id="price" placeholder="price">
   <br/>
-  <label for="price">city</label>
+  <label for="city">city</label>
   <input type="text" th:field="*{city}" id="city" placeholder="city">
   <br/>
   <label for="author">author</label>
   <input type="text" th:field="*{author}" id="author" placeholder="author Name">
   <br/>
-  <input type="submit" value="Create User">
+  <input type="file"  name="file1" placeholder="image">
+  <br/>
+  <input type="submit" value="Create product">
 </form>
 </body>
 </html>
